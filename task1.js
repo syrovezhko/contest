@@ -1,78 +1,81 @@
 function task1(numbers) {
   const dictionary = {
-    0: 0,
-    1: 1,
-    2: 2,
-    3: 3,
-    4: 4,
-    5: 5,
-    6: 6,
-    7: 7,
-    8: 8,
-    9: 9,
-    10: 'A',
-    11: 'B',
-    12: 'C',
-    13: 'D',
-    14: 'E',
-    15: 'F',
-    16: 'G',
-    17: 'H',
-    18: 'I',
-    19: 'J',
-    20: 'K',
-    21: 'L',
-    22: 'M',
-    23: 'N',
-    24: 'O',
-    25: 'P',
-    26: 'Q',
-    27: 'R',
-    28: 'S',
-    29: 'T',
-    30: 'U',
-    31: 'V',
-    32: 'W',
-    33: 'X',
-    34: 'Y',
-    35: 'Z',
-    36: 'a',
-    37: 'b',
-    38: 'c',
-    39: 'd',
-    40: 'e',
-    41: 'f',
-    42: 'g',
-    43: 'h',
-    44: 'i',
-    45: 'j',
-    46: 'k',
-    47: 'l',
-    48: 'm',
-    49: 'n',
-    50: 'o',
-    51: 'p',
-    52: 'q',
-    53: 'r',
-    54: 's',
-    55: 't',
-    56: 'u',
-    57: 'v',
-    58: 'w',
-    59: 'x',
-    60: 'y',
-    61: 'z',
-    62: ' ',
+    0: 48,
+    1: 49,
+    2: 50,
+    3: 51,
+    4: 52,
+    5: 53,
+    6: 54,
+    7: 55,
+    8: 56,
+    9: 57,
+    10: 65,
+    11: 66,
+    12: 67,
+    13: 68,
+    14: 69,
+    15: 70,
+    16: 71,
+    17: 72,
+    18: 73,
+    19: 74,
+    20: 75,
+    21: 76,
+    22: 77,
+    23: 78,
+    24: 79,
+    25: 80,
+    26: 81,
+    27: 82,
+    28: 83,
+    29: 84,
+    30: 85,
+    31: 86,
+    32: 87,
+    33: 88,
+    34: 89,
+    35: 90,
+    36: 97,
+    37: 98,
+    38: 99,
+    39: 100,
+    40: 101,
+    41: 102,
+    42: 103,
+    43: 104,
+    44: 105,
+    45: 106,
+    46: 107,
+    47: 108,
+    48: 109,
+    49: 110,
+    50: 111,
+    51: 112,
+    52: 113,
+    53: 114,
+    54: 115,
+    55: 116,
+    56: 117,
+    57: 118,
+    58: 119,
+    59: 120,
+    60: 121,
+    61: 122,
+    62: 32,
   }
 
-  let result = '';
+  let uint8Array = [];
   
   for (let i = 0; i < numbers.length; i++) {
-    const charCode = dictionary.hasOwnProperty([numbers[i]]) ? dictionary[numbers[i]] : '_';
-    result += charCode;
+    const charCode = dictionary.hasOwnProperty([numbers[i]]) ? dictionary[numbers[i]] : 95;
+    uint8Array.push(charCode);
   }
+
+  let result = new Uint8Array(uint8Array)
   
-  return result;
+  
+  return new TextDecoder().decode(result);
 };
 
 module.exports = task1;
@@ -89,8 +92,8 @@ const numbers3 = [17,40,47,47,50,62,32,50,53,47,39,-1];
 
 // Hello World_
 
-console.log(a(numbers1))
-console.log(a(numbers2))
-console.log(a(numbers3))
+console.log(task1(numbers1))
+console.log(task1(numbers2))
+console.log(task1(numbers3))
 
 */
