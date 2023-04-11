@@ -79,10 +79,10 @@ function task1(numbers) {
 };
 
 module.exports = task1;
-/*
+// /*
 const numbers1 = [14,12,22,10,28,38,53,44,51,55,62,2,0,1,5];
 
-// 'ECMAScript 2015'
+// ECMAScript 2015
 
 const numbers2 = [17,40,47,47,50,62,18,49,55,40,53,49,62,22,40,40,55,56,51,62,2,0,2,3];
 
@@ -96,4 +96,4 @@ console.log(task1(numbers1))
 console.log(task1(numbers2))
 console.log(task1(numbers3))
 
-*/
+// */
